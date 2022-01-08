@@ -197,7 +197,7 @@ static void list_books(GtkWidget *widget, gpointer data)
     while (iterator != NULL)
     {
       char * book;
-      if (0 > __mingw_asprintf(&book, "Book no. %d: %s %s %d %.2f\n",
+      if (0 > asprintf(&book, "Book no. %d: %s %s %d %.2f\n",
            ++i, iterator->author, iterator->title,
            iterator->amount, iterator->price))
       {

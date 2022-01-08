@@ -1,5 +1,5 @@
 //THIS FILE IMPLEMENTS THE DYNAMIC LINKED LIST USED TO STORE BOOKS DATA
-
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -270,7 +270,7 @@ bool loadFromCsv(const char *nazwaPliku, book **storage)
             int amount1 = atoi(amount);
             if (DEBUG == 1)
             {
-                printf("DODAJE KSIAZKE: %s %s %d %.2f\n", title, author, price1, amount1);
+                printf("DODAJE KSIAZKE: %s %s %.2f %d \n", title, author, price1, amount1);
             }
             pushBackBook(storage, title, author, price1, amount1);
         }
